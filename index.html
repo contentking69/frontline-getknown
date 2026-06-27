@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontline by Get Known | Affordable Social Media, Same Results</title>
+<meta name="description" content="Affordable, done-for-you social media from the team behind Get Known. Same results, accessible pricing. Pick up where we left off.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --bg:#070708; --panel:#0e0e11; --line:#1c1c22;
+    --txt:#f4f4f6; --mut:#9a9aa6; --accent:#e1306c; --accent2:#ff5a8a;
+  }
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--txt);
+    font-family:'Inter',-apple-system,sans-serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 22px}
+  .glow{
+    position:fixed;top:-25%;left:50%;transform:translateX(-50%);
+    width:900px;height:900px;border-radius:50%;
+    background:radial-gradient(circle,rgba(225,48,108,.18),transparent 60%);
+    filter:blur(30px);z-index:0;pointer-events:none;
+  }
+  header,section{position:relative;z-index:1}
+
+  /* HERO */
+  .hero{padding:74px 0 46px;text-align:center}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent2);border:1px solid var(--line);
+    background:rgba(225,48,108,.06);padding:8px 16px;border-radius:100px;margin-bottom:26px;
+  }
+  .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+  h1{
+    font-size:clamp(34px,6vw,58px);font-weight:900;line-height:1.04;
+    letter-spacing:-.02em;margin-bottom:20px;
+  }
+  h1 .hl{background:linear-gradient(120deg,var(--accent2),var(--accent));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .sub{font-size:clamp(16px,2.4vw,20px);color:var(--mut);max-width:620px;margin:0 auto 34px}
+  .cta{
+    display:inline-block;font-size:16px;font-weight:700;color:#fff;
+    background:linear-gradient(120deg,var(--accent),var(--accent2));
+    padding:16px 38px;border-radius:12px;text-decoration:none;
+    box-shadow:0 12px 34px rgba(225,48,108,.35);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .cta:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(225,48,108,.5)}
+
+  /* PROOF STRIP */
+  .stats{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:42px}
+  .stat{
+    flex:1 1 150px;max-width:200px;background:var(--panel);border:1px solid var(--line);
+    border-radius:14px;padding:20px 14px;
+  }
+  .stat .n{font-size:26px;font-weight:900;color:#fff}
+  .stat .l{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+
+  /* SECTION */
+  .s{padding:54px 0}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);margin-bottom:12px}
+  h2{font-size:clamp(26px,4vw,38px);font-weight:800;letter-spacing:-.01em;margin-bottom:18px;line-height:1.1}
+  .lead{color:var(--mut);font-size:17px;max-width:660px}
+
+  /* CASE STUDY */
+  .case{
+    background:var(--panel);border:1px solid var(--line);border-radius:20px;
+    padding:30px;margin-top:8px;
+  }
+  .case .quote{font-size:19px;font-weight:600;line-height:1.5;margin-bottom:18px}
+  .case .quote b{color:var(--accent2)}
+  .shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+  .shots img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+  .who{display:flex;align-items:center;gap:12px;margin-top:18px;color:var(--mut);font-size:14px}
+  .who .av{width:38px;height:38px;border-radius:50%;background:linear-gradient(120deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff}
+  .caselink{display:inline-block;margin-top:20px;color:var(--accent2);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,90,138,.4);padding-bottom:2px}
+
+  /* FORM */
+  .formwrap{
+    background:var(--panel);border:1px solid var(--line);border-radius:22px;
+    padding:14px;margin-top:10px;box-shadow:0 30px 80px rgba(0,0,0,.5);
+  }
+  .formwrap iframe{width:100%;border:none;border-radius:14px;display:block;min-height:640px;background:#fff}
+  .reassure{text-align:center;color:var(--mut);font-size:14px;margin-top:18px}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--mut);font-size:13px;margin-top:30px}
+  footer b{color:var(--txt)}
+
+  @media(max-width:600px){
+    .shots{grid-template-columns:1fr}
+    .hero{padding:54px 0 36px}
+    .s{padding:42px 0}
+  }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge"><span class="dot"></span>Frontline · by Get Known</span>
+    <h1>Affordable social media.<br><span class="hl">The same results.</span></h1>
+    <p class="sub">You reached out to us once before. The timing or budget wasn't right then, and that's fair. So we built Frontline: the same team, the same standard of content, made accessible. Let's pick up where we left off.</p>
+    <a href="#start" class="cta">Click here to get started</a>
+
+    <div class="stats">
+      <div class="stat"><div class="n">15M+</div><div class="l">Views generated</div></div>
+      <div class="stat"><div class="n">759k</div><div class="l">Likes</div></div>
+      <div class="stat"><div class="n">30k+</div><div class="l">New followers</div></div>
+      <div class="stat"><div class="n">1 brand</div><div class="l">One campaign</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="s">
+  <div class="wrap">
+    <div class="eyebrow">Real client · real numbers</div>
+    <h2>What "the same results" actually looks like</h2>
+    <div class="case">
+      <p class="quote">"These guys are <b>insanely good</b>. We went from barely getting seen to millions of views and a flood of new customers walking in the door."</p>
+      <div class="shots">
+        <img src="images/ladonuts-testimonial.jpg" alt="LA Donuts client testimonial and follower growth">
+        <img src="images/ladonuts-analytics.jpg" alt="LA Donuts analytics: 13.5M views, 759k likes">
+      </div>
+      <div class="who"><span class="av">LD</span><div><b style="color:#fff">LA Donuts</b> &nbsp;·&nbsp; Frida, Owner</div></div>
+      <a class="caselink" href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTI2MDY2OTQxMTk5MTI3?story_media_id=3804757399564300065&igsh=dWV2ZzBjZ2xhZTNv" target="_blank" rel="noopener">See more client results on Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="start">
+  <div class="wrap">
+    <div class="eyebrow">Pick up where we left off</div>
+    <h2>Tell us about your business</h2>
+    <p class="lead" style="margin-bottom:26px">Drop your details below. We'll come back to you personally with how Frontline can grow your brand on a budget that actually works for you. No pressure, no hard sell.</p>
+    <div class="formwrap">
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/form/tQnRVpXHheZY8my4S3Xb"
+        title="Frontline enquiry form"
+        loading="lazy"
+        scrolling="no"></iframe>
+    </div>
+    <p class="reassure">Prefer to just reply? Email us back and a real person will get straight onto it.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>Frontline</b> by Get Known &nbsp;·&nbsp; Sydney &nbsp;·&nbsp; Affordable done-for-you social media<br>
+    Same team. Same standard. Built to be accessible.
+  </div>
+</footer>
+
+</body>
+</html>
